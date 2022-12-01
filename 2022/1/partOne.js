@@ -3,18 +3,22 @@ const path = require("path");
 
 let rawInput = fs.readFileSync(path.resolve(__dirname, "./input.txt"), "utf8");
 
-const calories = rawInput.split("\n");
+const arrayInput = rawInput.split("\n");
 
-let maxSoFar = -Infinity;
-let curr = 0;
+const findMaxCalories = calories => {
+  let maxSoFar = -Infinity;
+  let curr = 0;
 
-for (let calorie of calories) {
-  if (calorie === "") {
-    maxSoFar = Math.max(maxSoFar, curr);
-    curr = 0;
-  } else {
-    curr += Number(calorie);
+  for (let calorie of calories) {
+    if (calorie === "") {
+      maxSoFar = Math.max(maxSoFar, curr);
+      curr = 0;
+    } else {
+      curr += Number(calorie);
+    }
   }
-}
 
-console.log(`The max amount of calories carried by an elf is: ${maxSoFar}`);
+  return `The max amount of calories carried by an elf is: ${maxSoFar}`;
+};
+
+console.log(findMaxCalories(arrayInput));
