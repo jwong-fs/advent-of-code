@@ -25,8 +25,6 @@ const winsOver = {
   C: "X"
 };
 
-// Part One
-
 const shapeSelectionScore = shape => {
   return shapePoints[shape];
 };

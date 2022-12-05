@@ -41,7 +41,7 @@ const getSumOfBadgePriorities = rucksacks => {
       }
     }
   }
-  return sum;
+  return `The sum of badge priorities is ${sum}`;
 };
 
 console.log(getSumOfBadgePriorities(rucksacks));
