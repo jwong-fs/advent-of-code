@@ -27,7 +27,8 @@ const findFirstMarker = (s, n) => {
       return `The first ${n}-letter marker is: ${i + 1}`;
     }
   }
-  return "bye";
+
+  return `The first ${n}-letter marker cannot be detected!`;
 };
 
 // Part One
